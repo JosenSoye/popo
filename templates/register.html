@@ -1,0 +1,84 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in</title>
+</head>
+<body>
+    <div class="all">
+        <div class="container">
+            <div class="img">
+                <img src="{%static 'images/log1.png'%}" class="img1">
+                <img src="{%static 'images/airlogo.jpg'%}" class="img1">
+            </div>
+            <p style="font-size: 30px;">Enter your email to join us or sign<br> in.</p>
+            
+            <div class="form">
+                <form method="post" class="form">
+                    {% csrf_token %}
+                    {{ form }}
+                    <br>
+                    <p style="color: gray;">By continuing, I agree to Nike's privacy policy.<br> Terms of use.</p>
+                    <input type="submit" value="continue" class="butt">
+                </form>
+            </div>
+            
+                
+           
+            
+            
+    
+        </div>
+    </div>
+    
+</body>
+<style>
+    .all{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(255, 255, 255);
+
+    }
+    .container {
+        width: 450px;
+        height: 500px;
+        display:flex;
+        flex-direction: column;
+        
+         
+        
+    }
+    .img{
+        width: 50px;
+        height: 50px;
+        display: flex;
+    }
+    .img1{
+        width: 50px;
+        height: 50px;
+    }
+    .box{
+        width: 390px;
+        height: 50px;
+        border-radius: 10px;
+        
+
+    }
+    .form{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .butt{
+        width: 150px;
+        height: 40px;
+        background-color: black;
+        color: white;
+        border-radius: 30px;
+    }
+</style>
+</html>
