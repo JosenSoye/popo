@@ -1,0 +1,91 @@
+{% extends 'mtemplate.html'%}
+{%load static%}
+
+{% block content %}
+      
+<div class="mid">
+    <h5 style="font-size: 17px;">Move, Shop, Customise & Celebrate With Us</h5>
+    <p> No matter what you feel like doing today, It’s better as a Member.<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Join Us</p>
+</div>
+<div class="sub4">
+    <img src="{%static 'images/home2.jpg'%}" class="img3">
+</div>
+ <div class="sub5">
+    <p style="font-size: 17px;">JUST IN</p>
+    <H1 style="font-size: 57px;">NOTHING BEATS THE CITY</H1>
+    <P>Built to overcome anything the city throws your way</P>
+</div>
+<p style="font-size: 30px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;featured</p>
+<div class="sub6">
+    
+    <div class="suba">
+        <img src="{%static 'images/cover1.png'%}" class="img4">
+    </div>
+    <div class="subb"   >
+        <img src="{%static 'images/cover2.jpg'%}"class="img4">
+    </div>
+    <div class="subc">
+        <img src="{%static 'images/cover3.webp'%}"class="img4">
+    </div>
+</div>
+<br>
+<div class="card1">
+    <h2>NEW ARRIVALS JUST LANDED</h2>
+    <div class="scroll-container">
+      {%for i in pro%}      
+        <div class="card" style="width: 18rem;">
+            <a href="{%url 'detail' i.id%}"><img src="/nike/{{i.img}}" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+              <p class="card-text">
+                <h3>{{i.name}}</h3>
+                <p>{{i.cat}}</p>
+                <H4>MRP :{{i.price}}</H4>
+              </p>
+            </div>
+          </div>
+      {%endfor%}
+          
+    </div>
+</div>
+<br>
+<div class="card1">
+  <h2>NIKE FOR CLOTHINGS</h2>
+  <div class="scroll-container">
+    {%for i in pro1%}      
+      <div class="card" style="width: 18rem;">
+         <a href="{%url 'detail2' i.id%}"><img src="/nike/{{i.img}}" class="card-img-top" alt="..."></a> 
+          <div class="card-body">
+            <p class="card-text">
+              <h3>{{i.name}}</h3>
+              <p>{{i.cat}}</p>
+              <H4>MRP :{{i.price}}</H4>
+            </p>
+          </div>
+        </div>
+    {%endfor%}
+        
+  </div>
+</div>
+<br>
+<div class="card1">
+  <h2>NIKE FOR CLOTHINGS</h2>
+  <div class="scroll-container">
+    {%for i in pro2%}      
+      <div class="card" style="width: 18rem;">
+         <a href="{%url 'detail3' i.id%}"><img src="/nike/{{i.img}}" class="card-img-top" alt="..."></a> 
+          <div class="card-body">
+            <p class="card-text">
+              <h3>{{i.name}}</h3>
+              <p>{{i.cat}}</p>
+              <H4>MRP :{{i.price}}</H4>
+            </p>
+          </div>
+        </div>
+    {%endfor%}
+        
+  </div>
+</div>
+<br>
+{%endblock%}
